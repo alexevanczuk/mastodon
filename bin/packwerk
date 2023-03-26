@@ -26,16 +26,17 @@ end
 require "rubygems"
 require "bundler/setup"
 
-
-load Gem.bin_path("packwerk", "packwerk")
-
 module Packwerk
-  # Extracts the load paths from the analyzed application so that we can map constant names to paths.
   module ApplicationLoadPaths
     class << self
-      def extract_application_autoload_paths
-        raise 'this worked'
+      def extract_relevant_paths(*args)
+        # A simple hack to bypass changing Rails APIs in Rails 6+.
+        # Here we hard-code the most common paths.
+        paths = Dir['app/*'] + Dir['app/*/concerns'] + Dir['packs/*/*'] + Dir['packs/*/*/concerns/']
+        paths.map{|p| [p, Object]}.to_h
       end
     end
   end
 end
+
+load Gem.bin_path("packwerk", "packwerk")
