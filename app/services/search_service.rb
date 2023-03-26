@@ -88,7 +88,7 @@ class SearchService < BaseService
   end
 
   def full_text_searchable?
-    return false unless Chewy.enabled?
+    return false # unless Chewy.enabled?
 
     statuses_search? && !@account.nil? && !((@query.start_with?('#') || @query.include?('@')) && !@query.include?(' '))
   end

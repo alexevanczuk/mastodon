@@ -29,7 +29,7 @@ RSpec.configure do |config|
 
   config.before :suite do
     Rails.application.load_seed
-    Chewy.strategy(:bypass)
+    # Chewy.strategy(:bypass)
   end
 
   config.after :suite do
