@@ -7,6 +7,23 @@ GIT
       rails (>= 4.0)
 
 GIT
+  remote: https://github.com/rubyatscale/use_packs.git
+  revision: a348c61f11cb49167beb72504b4888b5d4903202
+  branch: ae-gradual-workshop
+  specs:
+    use_packs (0.0.13)
+      code_ownership
+      colorize
+      packs
+      packwerk
+      parse_packwerk
+      rubocop-packs
+      sorbet-runtime
+      thor
+      tty-prompt
+      visualize_packwerk
+
+GIT
   remote: https://github.com/witgo/nilsimsa
   revision: fd184883048b922b176939f851338d0a4971a532
   ref: fd184883048b922b176939f851338d0a4971a532
@@ -682,17 +699,6 @@ GEM
     unf_ext (0.0.8.2)
     unicode-display_width (2.4.2)
     uniform_notifier (1.16.0)
-    use_packs (0.0.13)
-      code_ownership
-      colorize
-      packs
-      packwerk
-      parse_packwerk
-      rubocop-packs
-      sorbet-runtime
-      thor
-      tty-prompt
-      visualize_packwerk
     visualize_packwerk (0.1.2)
       code_ownership
       packs
@@ -859,7 +865,7 @@ DEPENDENCIES
   tty-prompt (~> 0.23)
   twitter-text (~> 3.1.0)
   tzinfo-data (~> 1.2021)
-  use_packs
+  use_packs!
   webauthn (~> 3.0.0.alpha1)
   webmock (~> 3.12)
   webpacker (~> 5.2)
